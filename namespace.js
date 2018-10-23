@@ -17,8 +17,8 @@ function init()
 
 function squareClick()
 {
-    this.style.borderColor="red";
-    this.style.backgroundColor="yellow";
+    this.style.borderColor="yellow";
+    this.style.backgroundColor="red";
     console.log(this);
 }
 
