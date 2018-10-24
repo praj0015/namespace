@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",init);
 
 function init()
 {
-    let newSquareSection=document.createElement("section");
+    var newSquareSection=document.createElement("section");
     newSquareSection.className="box";
     newSquareSection.textContent="praj0015";
     
@@ -27,7 +27,6 @@ function mouseOver(e)
     e.target.classList.toggle("focus");
     e.target.style.background="orange";
     e.target.style.borderColor="green";
-    e.target.style.border=1rem;
     console.log(e);
     console.log(e.target);
 }
