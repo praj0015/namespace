@@ -6,7 +6,7 @@ function init()
     newSquareSection.className="box";
     newSquareSection.textContent="praj0015";
     
-    let square=document.getElementById("boxes");
+    var square=document.getElementById("boxes");
     square.appendChild(newSquareSection);
     
     newSquareSection.addEventListener("click",squareClick);
