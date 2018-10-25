@@ -1,38 +1,32 @@
-document.addEventListener("DOMContentLoaded",init);
 
-function init()
+var PRAJ0015={
+init: function()
 {
-    let newSqaureSection=document.createElement("section");
-    newSqaureSection.className="box";
-    newSqaureSection.textContent="praj0015";
+    let newSquareDiv=document.createElement("div");
+    newSquareDiv.className="box";
+    newSquareDiv.textContent="praj0015";
     
-    let square=document.getElementById("boxes");
-    square.appendChild(newSqaureSection);
+    let square=document.querySelector("#boxes");
+    square.appendChild(newSquareDiv);
     
-    newSqaureSection.addEventListener("click",squareClick);
-    newSqaureSection.addEventListener("mouseover",mouseOver);
-    newSqaureSection.addEventListener("mouseOut",mouseOut);
-    
-}
-
-function squareClick()
+    newSquareSection.addEventListener("click",squareClick);
+    newSquareSection.addEventListener("mouseover",mouseOver);
+    newSquareSection.addEventListener("mouseOut",mouseOut);
+ 
+    function squareClick()
 {
-    this.style.borderColor="red";
-    this.style.backgroundColor="yellow";
-    console.log(this);
+    this.style.borderColor="yellow";
+    this.style.backgroundColor="red";
 }
 
 function mouseOver(e)
 {
-    e.target.classList.toggle("focus");
-    console.log(e);
-    console.log(e.target);
+    e.target.classList.toggle("highlight");
 }
 
 function mouseOut(e){
     
-    e.target.classList.toggle("focus");
+    e.target.classList.toggle("highlight");
     e.target.removeAttribute('style');
-    console.log(e);
-    console.log(e.target);
-}
+       }
+};
