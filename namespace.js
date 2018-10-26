@@ -1,46 +1,27 @@
-
-var PRAJ0015={
-init: function()
-{
-    var newSquareDiv = document.createElement("div");
-    newSquareDiv.className="box";
-    newSquareDiv.textContent="praj0015";
+var PRAJ0015 = {
     
-    document.getElementById("boxes").appendChild(newSquareDiv);
-    
-    newSquareDiv.addEventListener("click",function(){
+    init: function () {
         
-        newSquareDiv.style.borderColor="yellow";
-        newSquareDiv.style.backgroundColor="red";
-    });
-    
-    newSquareDiv.addEventListener("mouseover",function(){
+        let newSquareDiv = document.createElement("div");
         
-        newSquareDiv.classList.toggle("highlight");
-    });
-    
-    newSquareDiv.addEventListener("mouseOut",function(){
+        newSquareDiv.className = "box";
         
-        newSquareDiv.classList.toggle("highlight");
-        newSquareDiv.removeAttribute('style');
-    });
-    
-}
-// 
-//    function squareClick()
-//{
-//    this.style.borderColor="yellow";
-//    this.style.backgroundColor="red";
-//}
-//
-//function mouseOver(e)
-//{
-//    e.target.classList.toggle("highlight");
-//}
-//
-//function mouseOut(e){
-//    
-//    e.target.classList.toggle("highlight");
-//    e.target.removeAttribute('style');
-//       }
+        newSquareDiv.textContent = "praj0015";
+        
+        document.getElementById("boxes").appendChild(newSquareDiv);
+        
+        newSquareDiv.addEventListener("click", function () {
+            newSquareDiv.style.borderColor = "yellow";
+            newSquareDiv.style.backgroundColor = "red";
+        });
+        
+        newSquareDiv.addEventListener("mouseover", function () {
+            newSquareDiv.classList.toggle("highlight");
+        });
+        
+        newSquareDiv.addEventListener("mouseout", function () {
+            newSquareDiv.classList.toggle("highlight");
+            newSquareDiv.removeAttribute('style');
+        });
+    }
 };
