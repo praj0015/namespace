@@ -1,40 +1,27 @@
-document.addEventListener("DOMContentLoaded",init);
-
-function init()
-{
-    var newSquareSection=document.createElement("section");
-    newSquareSection.className="box";
-    newSquareSection.textContent="praj0015";
+var PRAJ0015 = {
     
-    var square=document.getElementById("boxes");
-    square.appendChild(newSquareSection);
-    
-    newSquareSection.addEventListener("click",squareClick);
-    newSquareSection.addEventListener("mouseover",mouseOver);
-    newSquareSection.addEventListener("mouseOut",mouseOut);
-    
-}
-
-function squareClick()
-{
-    this.style.borderColor="yellow";
-    this.style.backgroundColor="red";
-    console.log(this);
-}
-
-function mouseOver(e)
-{
-    e.target.classList.toggle("focus");
-    e.target.style.background="orange";
-    e.target.style.borderColor="green";
-    console.log(e);
-    console.log(e.target);
-}
-
-function mouseOut(e){
-    
-    e.target.classList.toggle("focus");
-    e.target.removeAttribute('style');
-    console.log(e);
-    console.log(e.target);
-}
+    init: function () {
+        
+        let newSquareDiv = document.createElement("div");
+        
+        newSquareDiv.className = "box";
+        
+        newSquareDiv.textContent = "praj0015";
+        
+        document.getElementById("boxes").appendChild(newSquareDiv);
+        
+        newSquareDiv.addEventListener("click", function () {
+            newSquareDiv.style.borderColor = "yellow";
+            newSquareDiv.style.backgroundColor = "red";
+        });
+        
+        newSquareDiv.addEventListener("mouseover", function () {
+            newSquareDiv.classList.toggle("highlight");
+        });
+        
+        newSquareDiv.addEventListener("mouseout", function () {
+            newSquareDiv.classList.toggle("highlight");
+            newSquareDiv.removeAttribute('style');
+        });
+    }
+};
