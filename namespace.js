@@ -15,7 +15,7 @@ init: function()
     });
     
     newSquareDiv.addEventListener("mouseover",function(){
-        s
+        
         newSquareDiv.classList.toggle("highlight");
     });
     
